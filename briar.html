@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My League Journey | Briar</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
     
@@ -21,6 +22,8 @@
         <div class="hero-content container">
             <h1 class="gradient-text">Briar | The Restrained Hunger</h1>
             <p>A relentless jungler who takes over games through unmatched aggression</p>
+            <button class="audio-btn" id="playAudioBtn">Make her Laugh (Press L)</button>
+            <audio src="audio/briar.mp3" id="champAudio"></audio>
         </div>
     </section>
 
@@ -91,11 +94,11 @@
         <h2 class="text-center" style="text-align: center;">Favourite Build</h2>
         <div class="section-divider"></div>
         <ul class="build-list">
-            <li><strong></strong></li>
-            <li><strong></strong></li>
-            <li><strong></strong></li>
-            <li><strong></strong></li>
-            <li><strong></strong></li>
+            <li><strong>1.</strong> Blade of the Ruined King</li>
+            <li><strong>2.</strong> Black Cleaver</li>
+            <li><strong>3.</strong> Sterak's Gage</li>
+            <li><strong>4.</strong> Death's Dance</li>
+            <li><strong>5.</strong> Spirit Visage</li>
         </ul>
     </section>
 
@@ -116,6 +119,26 @@
         </div>
     </footer>
 
+    <script>
+        const audio = document.getElementById('champAudio');
+        const btn = document.getElementById('playAudioBtn');
+
+        function playAudio() {
+            if(audio){
+                audio.currentTime = 0;
+                audio.play();
+            }
+        }
+
+        if(btn) {
+            btn.addEventListener('click', playAudio);
+        }
+        document.addEventListener('keydown', (e) => {
+            if(e.key.toLowerCase() === 'l') {
+                playAudio();
+            }
+        });
+    </script>
 
 </body>
 </html>

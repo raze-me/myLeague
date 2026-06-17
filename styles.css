@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
     --bg-color: #0A1428;
@@ -6,7 +7,7 @@
     --gold-hover: #F0E6DE;
     --text-light: #F0E6DE;
     --text-gray: #A09BBC;
-    --font-heading: #'Cinzel', serif;
+    --font-heading: 'Cinzel', serif;
     --font-body: 'Inter', sans-serif;
     --transition: all 0.3s ease;
 }
@@ -62,7 +63,7 @@ ul {
     width: 10px;
     height: 10px;
     background: var(--bg-color);
-    border: 1px solid var(--gradient-accent);
+    border: 1px solid var(--gold-accent);
 }
 
 nav {
@@ -118,13 +119,13 @@ nav a:hover::after, nav a.active::after {
     padding: 12px 30px;
     background-color: transparent;
     color: var(--gold-accent);
-    border: 1px solid (--gold-accent);
+    border: 1px solid var(--gold-accent);
     font-family: var(--font-heading);
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
     cursor: pointer;
-    transform: var(--transition);
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
 }
@@ -190,7 +191,7 @@ section {
     border: 1px solid rgba(200, 170, 110, 0.2);
     border-radius: 4px;
     padding: 30px;
-    transform: var(--gold-accent);
+    transition: var(--transition);
     position: relative;
 }
 
@@ -249,7 +250,7 @@ section {
 
 .champ-img-container {
     height: 250px;
-    overlay: hidden;
+    overflow: hidden;
     position: relative;
 }
 
@@ -297,7 +298,7 @@ section {
 }
 
 .quote-box {
-    background: linear-gradient(135deg, rgba(30, 35, 40, 0.8));
+    background: linear-gradient(135deg, rgba(30, 35, 40, 0.8), rgba(10, 20, 40, 0.8));
     border-left: 4px solid var(--gold-accent);
     padding: 40px;
     margin: 40px auto;
@@ -322,8 +323,8 @@ section {
 }
 
 .ability-icon {
-    width: 64;
-    height: 64;
+    width: 64px;
+    height: 64px;
     border: 2px solid var(--gold-accent);
     border-radius: 50%;
     margin: 0 auto 15px;
@@ -511,3 +512,22 @@ footer {
     box-shadow: 0 0 30px rgba(200, 170, 110, 0.3);
 }
 
+
+.audio-btn {
+    background: transparent;
+    border: 1px solid rgba(200, 170, 110, 0.5);
+    color: var(--text-gray);
+    padding: 8px 16px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: var(--transition);
+}
+
+.audio-btn:hover {
+    border-color: var(--gold-accent);
+    color: var(--text-light);
+    background: rgba(200, 170, 110, 0.1);
+}
