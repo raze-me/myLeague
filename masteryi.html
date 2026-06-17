@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My League Journey | Master Yi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="briar.html"></a></li>
+            <li><a href="xinzhao.html">Xin Zhao</a></li>
+            <li><a href="masteryi.html" class="active">Master Yi</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" style="background-image: url('images/masteryi.html')">
+        <div class="hero-content container">
+            <h1 class="gradient-text">Master Yi | The Wuju Bladesman</h1>
+            <p>A fast-paecd hypercarry capable of taking on the entire team (1v9)</p>
+            <button class="audio-btn" id="playAudioBtn">Make him Laugh (Press L)</button>
+            <audio src="audio/masteryi.mp3" id="champAudio"></audio>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="card">
+            <h2>Why I Play Master Yi</h2>
+            <div class="section-divider"></div>
+            <p>Master Yi is the face of the 1v9 carry fantasy. When the game reaches its later stages, his scaling potential is virtually unmatched. I enjoy his fast farming playstyle, allowing me to accumulate resources rapidly while the enemy team wastes time. In chaotic teamfights, his ability to cleanly wipe out multiple targets one after another through perfectly timed Alpha Strikes is one of the most satisfying experiences in League of Legends.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="text-center" style="text-align: center;">Ability Showcase</h2>
+        <div class="section-divider"></div>
+        <div class="ability-grid">
+            <div class="ability-card card">
+                <div class="ability-icon">P</div>
+                <h3 class="ability-name">Double Strike</h3>
+                <p class="ability-desc">Every few attacks, Yi strikes twice</p>
+            </div>
+            <div class="ability-card card">
+                <div class="ability-icon">Q</div>
+                <h3 class="ability-name">Alpha Strike</h3>
+                <p class="ability-desc">Teleports to strike multiple enemies, becoming untargetable during the dsah</p>
+            </div>
+            <div class="ability-card card">
+                <div class="ability-icon">W</div>
+                <h3 class="ability-name">Meditate</h3>
+                <p class="ability-desc">Channels to restore health and reduce incoming damage</p>
+            </div>
+            <div class="ability-card card">
+                <div class="ability-icon">E</div>
+                <h3 class="ability-name">Wuju Strike</h3>
+                <p class="ability-desc">Empowers basic attacks to deal bonus true damage for a short duration.</p>
+            </div>
+            <div class="ability-card card">
+                <div class="ability-icon">R</div>
+                <h3 class="ability-name">Highlander</h3>
+                <p class="ability-desc">Grants massive movement and attack speed, while gaining immunity to slowing effects.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="text-center" style="text-align: center;">My Master Yi Stats</h2>
+        <div class="section-divider"></div>
+        <div class="stats-panel">
+            <div class="stat-item">
+                <span class="stat-value">156</span>
+                <span class="stat-label">Games Played</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">55%</span>
+                <span class="stat-label">Win Rate</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">2.9</span>
+                <span class="stat-label">KDA</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">6</span>
+                <span class="stat-label">Pentakills</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">9</span>
+                <span class="stat-label">Longest Win Streak</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="text-center" style="text-align: center;">Best Memories</h2>
+        <div class="section-divider"></div>
+        <div class="champion-grid">
+            <div class="card">
+                <h3 style="color: var(--gold-hover); margin-bottom: 15px;">First Pentakill</h3>
+                <p>A very long game of 45 mins and it was a elder fight, the opponents where squishy therefore i was able to quick 2 hit kill them all. I juked all cc to get my first penta.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="text-center" style="text-align: center;">Favourite Build</h2>
+        <div class="section-divider"></div>
+        <ul class="build-list">
+            <li><strong>1.</strong>Kraken Slayer</li>
+            <li><strong>2.</strong>Guinsoo Rageblade</li>
+            <li><strong>3.</strong>BORK</li>
+            <li><strong>4.</strong>Wits End</li>
+            <li><strong>5.</strong>Deaths Dance</li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/raze-me/myLeague" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                <a href="https://op.gg/lol/summoners/sea/MAKROV7-SG2" target="_blank" rel="noopener noreferrer">OP.GG Profile</a>
+                <a href="mailto:ac.otherside@gmail.com">Email Me</a>
+            </div>
+            <p class="copyright">My League Journey. Not affiliated with Riot Games.</p>
+        </div>
+    </footer>
+
+    <script>
+        const audio = document.getElementById('champAudio');
+        const btn = document.getElementById('playAudioBtn');
+
+        function playAudio() {
+            if(audio){
+                audio.currentTime = 0;
+                audio.play();
+            }
+        }
+
+        if(btn) {
+            btn.addEventListener('click', playAudio);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if(e.key.toLowerCase() === 'l') {
+                playAudio();
+            }
+        })
+    </script>
+    
+</body>
+</html>
