@@ -19,10 +19,12 @@
     </nav>
 
     <section class="hero" style="background-image: url('images/xinzhao.jpg'); background-position: top center;">
-        <h1 class="gradient-text">Xin Zhao | Seneschal of Demacia</h1>
-        <p>A resilient diver who dictates the early game and secures vital objectives.</p>
-        <button class="audio-btn" id="playAudioBtn">Make him Laugh (press L)</button>
-        <audio src="audio/xinzhao.mp3" id="champAudio"></audio>
+        <div class="hero-content container">
+            <h1 class="gradient-text">Xin Zhao | Seneschal of Demacia</h1>
+            <p>A resilient diver who dictates the early game and secures vital objectives.</p>
+            <button class="audio-btn" id="playAudioBtn">Make him Laugh (press L)</button>
+            <audio src="audio/xinzhao.mp3" id="champAudio"></audio>
+        </div>
     </section>
 
     <section class="container">
@@ -152,14 +154,15 @@
             }
         }
 
-        if(btn){
+        if(btn) {
             btn.addEventListener('click', playAudio);
         }
+
         document.addEventListener('keydown', (e) => {
             if(e.key.toLowerCase() === 'l') {
                 playAudio();
             }
-        });
+        })
     </script>
 
 
